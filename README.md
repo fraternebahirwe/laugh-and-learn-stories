@@ -13,6 +13,11 @@ Open a category, pick a story, and read it on a background that matches its mood
 (farm, forest, ocean, space, castle, school, night...). Every story ends with a 💡 wisdom line.
 There is also a 🎲 "Surprise me" button.
 
+## Reading experience
+- A landscape scene per story mood (farm hills, ocean waves, twinkling night sky, castle, city skyline...)
+- Progress bar while reading, text size A− / A+, 🔊 read-aloud, ❤️ favourites
+- Stories you finish get a ✅ and fill the progress bar on each category card (saved on your device)
+
 ## Run it
 
 No build needed. Open `index.html` in a browser, or:
