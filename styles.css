@@ -46,3 +46,7 @@ a.card:hover, a.card:focus-visible { transform: translateY(-3px) scale(1.01); ou
 .theme-kitchen  { background: linear-gradient(#fff0d6, #ffd9a0 60%, #e8a35c); }
 .theme-night h1, .theme-space h1, .theme-ocean h1, .theme-forest h1, .theme-castle h1,
 .theme-night .sub, .theme-space .sub { color: #fff; text-shadow: none; }
+
+.reader p { margin: .8em 0; }
+.reader .big { text-align: center; }
+@media (max-width: 480px) { .reader { font-size: 1.05rem; } }
