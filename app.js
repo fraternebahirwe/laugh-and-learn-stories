@@ -45,6 +45,7 @@
     app.replaceChildren(
       el("h1", { textContent: "Laugh & Learn" }),
       el("p", { className: "sub", textContent: "Stories that make you smile and leave you wiser. Pick a category." }),
+      el("a", { className: "back", href: "#/random", textContent: "🎲 Surprise me with a story" }),
       el("div", { className: "grid" }, CATEGORIES.map(c => {
         const b = el("a", { className: "card cat theme-" + c.theme, href: "#/" + c.id }, [
           el("div", { className: "big", textContent: c.emoji }),
@@ -103,6 +104,11 @@
   function route() {
     const [, cat, id] = location.hash.split("/");
     if (!cat) home();
+    else if (cat === "random") {
+      const c = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
+      const l = STORIES[c.id];
+      location.replace("#/" + c.id + "/" + l[Math.floor(Math.random() * l.length)].id);
+    }
     else if (!id) category(cat);
     else story(cat, id);
   }
