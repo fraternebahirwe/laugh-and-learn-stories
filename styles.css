@@ -140,3 +140,6 @@ body.theme-night .sub, body.theme-space .sub { color: #fff; }
 .reader p { margin: .8em 0; }
 .reader .big { text-align: center; }
 @media (max-width: 480px) { .reader { font-size: 1.05rem; } }
+
+/* titles inside the light story card always use dark ink, even on dark scenes */
+body .reader h1, body .story-item h3 { color: var(--ink); text-shadow: none; }
