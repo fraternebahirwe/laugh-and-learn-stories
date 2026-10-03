@@ -1,0 +1,48 @@
+:root { --ink: #1d1b2e; --card: rgba(255,255,255,.88); }
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; font-family: Georgia, "Iowan Old Style", serif;
+  color: var(--ink); background: #ddd; transition: background 0.6s;
+}
+main { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; padding: 24px 16px 64px; }
+h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); margin: .3em 0; text-shadow: 0 1px 0 rgba(255,255,255,.5); }
+.sub { font-size: 1.1rem; }
+a { color: inherit; text-decoration: none; }
+.back { display: inline-block; margin-bottom: 8px; font-weight: bold; background: var(--card); padding: 6px 12px; border-radius: 99px; }
+
+.card { background: var(--card); border-radius: 18px; padding: 18px 20px; box-shadow: 0 6px 20px rgba(0,0,0,.18); transition: transform .15s; }
+a.card:hover, a.card:focus-visible { transform: translateY(-3px) scale(1.01); outline: 3px solid rgba(0,0,0,.25); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 20px; }
+.cat { text-align: center; }
+.cat .big, .reader .big { font-size: 3rem; }
+.cat h2 { margin: .2em 0; }
+.list { display: grid; gap: 12px; margin-top: 16px; }
+.story-item { display: flex; gap: 14px; align-items: center; }
+.story-item h3 { margin: 0; }
+.story-item .num { font-size: 2rem; }
+.reader { font-size: 1.15rem; line-height: 1.7; padding: 24px clamp(18px, 4vw, 40px); }
+.reader h1 { margin-top: 0; }
+.moral { margin-top: 22px; padding: 14px 16px; border-left: 6px solid #f4b400; background: #fff7d6; border-radius: 8px; font-style: italic; }
+.nav { display: flex; justify-content: space-between; margin-top: 16px; font-weight: bold; }
+.nav a { background: var(--card); padding: 8px 16px; border-radius: 99px; }
+
+#decor { position: fixed; inset: 0; overflow: hidden; z-index: 0; pointer-events: none; }
+#decor span { position: absolute; bottom: -60px; opacity: .55; animation: rise linear infinite; }
+@keyframes rise { to { transform: translateY(-115vh) rotate(25deg); } }
+@media (prefers-reduced-motion: reduce) { #decor span { animation: none; bottom: auto; top: 20%; } }
+
+.theme-home     { background: linear-gradient(160deg, #ffd1dc, #c9b6ff 50%, #a0e7ff); }
+.theme-farm     { background: linear-gradient(#8ed6ff 0 55%, #7cc16b 55%); }
+.theme-village  { background: linear-gradient(#ffcf9e, #f6e7c1 60%, #b9a37a); }
+.theme-school   { background: linear-gradient(135deg, #fff3a3, #ffb6c1 60%, #9ad0ff); }
+.theme-night    { background: linear-gradient(#0b1033, #2b2d6e); }
+.theme-forest   { background: linear-gradient(#bfe8b0, #3f8f4f 70%, #214d2b); }
+.theme-ocean    { background: linear-gradient(#7fd6ff, #1b7fbf 60%, #0a3d6b); }
+.theme-space    { background: radial-gradient(circle at 70% 20%, #3a1c71, #0b0830 70%); }
+.theme-desert   { background: linear-gradient(#ffe29a, #f2a65a 60%, #c8743a); }
+.theme-castle   { background: linear-gradient(#c7b8ff, #8f86c9 60%, #5a5390); }
+.theme-city     { background: linear-gradient(#ffb199, #ff6f91 40%, #4a4e8f); }
+.theme-mountain { background: linear-gradient(#e8f4ff, #9cc3e0 60%, #5c7a94); }
+.theme-kitchen  { background: linear-gradient(#fff0d6, #ffd9a0 60%, #e8a35c); }
+.theme-night h1, .theme-space h1, .theme-ocean h1, .theme-forest h1, .theme-castle h1,
+.theme-night .sub, .theme-space .sub { color: #fff; text-shadow: none; }
